@@ -2,15 +2,28 @@
 public class lab3functions {
 	public static void main(String[]args)
 	{
-		
+		String [] string
+	
 	}
 	public static String[] merge(String[] list1, String[] list2)
 	{
-		int x = list1.length + list2.length;
-		String[] returnarray= new String[x];
-		for (int i = 0; i < x; i++)
+		String[] newarray = new String[list1.length + list2.length];
+		for (int i = 0; i < list1.length + list2.length; i++)
 		{
-			for (int j = 0; j < )
+			if (list1[i].compareTo(list2[i]) > 0)
+			{
+				newarray[i] = list2[i];
+			}
+			else if (list1[i].compareTo(list2[i]) < 0)
+			{
+				newarray[i] = list1[i];
+			}
+			else 
+			{
+				newarray[i] = list1[i];
+				i++;
+				newarray[i] = list2[i];
+			}
 		}
 	}
 	public static String[] mergeSort(String[] list)
